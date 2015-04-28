@@ -1,0 +1,277 @@
+@require "partials/_global.styl"
+@require "partials/_fonts.styl"
+@require "partials/_hamburger.styl"
+@require "partials/_helpers.styl"
+@require "partials/_galleries.styl"
+@require "partials/_overrides.styl"
+
+/* ==========================================================================
+	Main Styles
+   ========================================================================== */
+
+html
+	text-shadow 0 0 1px transparent
+	width 100%
+	font-size 16px
+	font-family Roboto, sans-serif
+	font-weight 400
+	margin 0
+	background black
+	color white
+
+
+body
+	@extends html
+
+	&.admin-bar
+		#wpadminbar
+			position fixed
+			top 0
+
+
+a
+	outline 0 !important
+
+
+h1
+h2
+h3
+h4
+h5
+h6
+strong
+	font-weight 700
+
+
+a:link
+a:visited
+	text-decoration none
+
+
+a:link
+	color red
+
+
+a:visited
+	color darkred
+
+
+a:hover
+a:active
+a:focus
+	text-decoration underline
+
+
+#page
+	margin 2em 0
+	background none
+
+
+#masthead
+	wrapper()
+
+	.site-title
+		width 100%
+
+		#site-title
+		#site-description
+			margin 0
+
+		#site-title
+			width 100%
+			display inline-block
+			line-height 1
+			padding-bottom -0.1em
+			border-bottom 2px solid white
+			font-size 2em
+			text-align center
+			text-transform uppercase
+			text-align left
+
+			a
+				color inherit
+				text-decoration none
+
+		#site-description
+			width 100%
+			font-size 1em
+			text-align right
+			text-transform lowercase
+
+	#hamburger
+		position absolute
+		top -0.5rem
+		right 0
+
+
+#sb-title
+	@extends #masthead .site-title #site-title
+	text-align center
+	margin 1em auto 0.5em auto
+
+
+#main
+	wrapper()
+	box-sizing border-box
+
+
+#primary
+#secondary
+	width 100%
+	margin 0 auto
+	position relative
+	box-sizing border-box
+	transition all 0.5s
+
+
+#colophon
+	width 100%
+	margin-top 2em
+	color white
+
+	.site-info
+		wrapper()
+		padding 1em 0
+		border-top 1.5px solid white
+		text-align center
+		font-size 0.8em
+
+		a
+			color inherit
+
+	#rhd-logo-footer
+		width 1.25em
+		height 1.25em
+		margin 0 0.05em
+		position relative
+		bottom 0.15em
+
+
+/* ==========================================================================
+	Posts & Pages
+   ========================================================================== */
+
+.entry-title
+.page-title
+	margin-top 0
+
+
+.entry-content
+	width 100%
+
+	p
+		&:first-child
+			margin-top 0
+
+		&:last-child
+			margin-bottom 0
+	img
+		max-width 100%
+		margin 1em
+
+		.alignleft
+			margin-left 0
+
+		.alignright
+			margin-right 0
+
+	iframe
+		max-width 100%
+		display block
+		margin 0 auto
+
+
+.entry-title
+	text-transform uppercase
+	font-size 1.3em
+
+
+/* ==========================================================================
+	Widget Areas & Sidebars
+   ========================================================================== */
+
+#secondary
+	display none
+
+	.widget
+		width 100%
+		margin-bottom 1.5em
+
+	.widget:last-child
+		margin-bottom 0
+
+
+	.widget-title
+		margin-top 0
+
+
+.menu
+.sub-menu
+	margin 0
+	padding-left 0
+	list-style none
+
+
+#site-navigation-sidebar-container
+#site-navigation-sb-container
+	li
+		a
+			color inherit
+			letter-spacing 0.1em
+
+	.projects-sub-menu
+		display none
+		list-style circle
+
+
+#site-navigation-sidebar-container
+	margin-right 1em
+	text-align right
+
+	li
+		font-weight bold
+
+	.projects-sub-menu
+		margin 0.5em 1em 0.5em 0
+
+		li
+			a
+				font-weight normal
+
+
+#site-navigation-sb-container
+	margin-right 1em
+	font-size 1.2em
+	text-align right
+
+	.projects-sub-menu
+		margin 0.5em 1em 0.5em 0
+
+
+/* ==========================================================================
+	Media Queries
+   ========================================================================== */
+
+@media screen and (min-width 40em)
+	#hamburger
+		display none
+
+	#main
+		@extends .clearfix
+
+	#masthead
+		@extends .clearfix
+
+		.site-title
+			width 78%
+			float right
+
+	#primary
+		width 78%
+		float right
+
+	#secondary
+		width 20%
+		text-align right
+		float left
+		display block

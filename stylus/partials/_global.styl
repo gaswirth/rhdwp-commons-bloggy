@@ -1,0 +1,86 @@
+/* ==========================================================================
+	Global Stylus Variables
+   ========================================================================== */
+
+// Variables
+$less-black = #1c1c1c
+
+
+// Classes
+
+.unselectable
+	-webkit-user-select: none; /* Chrome/Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+	-o-user-select: none;
+	user-select: none;
+
+// Manual Flexbox
+
+.flexbox
+	text-align justify
+
+	&:after
+		width 100%
+		display inline-block
+		content ''
+
+.flexitem
+	display inline-block
+
+
+// Functions
+
+wrapper( $topMargin = false, $bottomMargin = false )
+	width 85%
+	max-width 64em
+	position relative
+
+	if $topMargin == false
+		$topMargin = 0
+	if $bottomMargin == false
+		$bottomMargin = 0
+
+	margin $topMargin auto $bottomMargin auto
+
+
+body-shadow( $yPos )
+	box-shadow 0em $yPos 0.45em 0em rgba(0,0,0,0.5)
+
+
+placeholder-props( $famVal, $color)
+	&::-webkit-input-placeholder
+		font-family $famVal
+		color $color
+	&:-moz-placeholder /* Firefox 18- */
+		font-family $famVal
+		color $color
+	&::-moz-placeholder  /* Firefox 19+ */
+		font-family $famVal
+		color $color
+	&:-ms-input-placeholder
+		font-family $famVal
+		color $color
+
+
+opacity( $n )
+	-moz-opacity $n
+	-webkit-opacity $n
+	opacity $n
+
+
+border-radius( $n )
+	-moz-border-radius $n
+	-webkit-border-radius $n
+	border-radius $n
+
+
+// transform( $n )
+// 	-webkit-transform $n
+// 	-ms-transform $n
+// 	transform $n
+//
+//
+// transition( $n )
+// 	-webkit-transition $n
+// 	transition $n
