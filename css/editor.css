@@ -1,5 +1,5 @@
 /***
-* RHD Dev: Compiled at 2:52:52 PM on 28-04-2015
+* RHD Dev: Compiled at 4:41:00 PM on 29-04-2015
 ***/
 
 /**
@@ -514,11 +514,6 @@ a:focus {
   color: inherit;
   letter-spacing: 0.1em;
 }
-#site-navigation-sidebar-container .projects-sub-menu,
-#site-navigation-sb-container .projects-sub-menu {
-  display: none;
-  list-style: circle;
-}
 #site-navigation-sidebar-container {
   margin-right: 1em;
   text-align: right;
@@ -526,19 +521,10 @@ a:focus {
 #site-navigation-sidebar-container li {
   font-weight: bold;
 }
-#site-navigation-sidebar-container .projects-sub-menu {
-  margin: 0.5em 1em 0.5em 0;
-}
-#site-navigation-sidebar-container .projects-sub-menu li a {
-  font-weight: normal;
-}
 #site-navigation-sb-container {
   margin-right: 1em;
   font-size: 1.2em;
   text-align: right;
-}
-#site-navigation-sb-container .projects-sub-menu {
-  margin: 0.5em 1em 0.5em 0;
 }
 @media screen and (min-width: 40em) {
   #hamburger {
