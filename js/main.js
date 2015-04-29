@@ -33,23 +33,11 @@ var isTablet = ( $body.hasClass('tablet') === true ) ? true : false;
 (function($){
 	rhdInit();
 
-	if ( wp_data.inc_slidebars > 0 )
+	if ( wp_data.inc_slidebars > 0 ) {
 		$.slidebars({
 			siteClose: false
 		});
-
-	if ( wp_data.inc_packery > 0 ) {
-		// Packery Initialization + Options
-    }
-
-    $(".projects-sub-menu").appendTo("li.menu-item-423");
-
-	$(".menu-item-423 > a").click(function(e){
-		e.preventDefault();
-		$(this)
-			.siblings(".sub-menu")
-			.slideToggle();
-	});
+	}
 
 })(jQuery);
 
@@ -60,7 +48,6 @@ var isTablet = ( $body.hasClass('tablet') === true ) ? true : false;
 
 function rhdInit() {
 	wpadminbarPush();
-	//rhd_youtube_responsivizer();
 }
 
 
