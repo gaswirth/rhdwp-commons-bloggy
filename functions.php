@@ -37,7 +37,6 @@ function rhd_enqueue_styles(){
 	wp_register_style( 'rhd-main', RHD_THEME_DIR . '/css/main.css', array(), '1', 'all' );
 	wp_register_style( 'rhd-enhanced', RHD_THEME_DIR . '/css/enhanced.css', array(), '1', 'all' );
 	wp_register_style( 'Slidebars', RHD_THEME_DIR . '/js/vendor/Slidebars/distribution/0.10.2/slidebars.min.css', array(), null, 'all' );
-	wp_register_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto:400,700,400italic' );
 
 	$normalize_deps = array();
 	if ( $theme_opts['rhd_include_slidebars'] == '1' ) {
@@ -95,32 +94,6 @@ function rhd_enqueue_scripts() {
 	wp_localize_script( 'rhd-main', 'wp_data', $data );
 }
 add_action('wp_enqueue_scripts', 'rhd_enqueue_scripts');
-
-
-/**
- * register_jquery function.
- *
- * @access public
- * @return void
- */
-function rhd_register_jquery() {
-	wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', RHD_THEME_DIR . '/js/vendor/jquery/dist/jquery.min.js' );
-	wp_enqueue_script( 'jquery' );
-}
-add_action( 'wp_enqueuescripts', 'rhd_register_jquery' );
-
-function rhd_add_editor_styles() {
-	//Google Fonts in admin editor
-	$font_url = '//fonts.googleapis.com/css?family=Roboto:400,700,400italic';
-	$font_url = str_replace( ',', '%2C', $font_url );
-	$font_url = str_replace( ':', '%3A', $font_url );
-    add_editor_style( $font_url );
-
-
-	add_editor_style( RHD_THEME_DIR . '/css/editor.css' );
-}
-add_action( 'after_setup_theme', 'rhd_add_editor_styles' );
 
 
 /**
