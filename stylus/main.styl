@@ -30,23 +30,23 @@ a
 	outline 0 !important
 
 
-a:link
-a:visited
-	text-decoration none
+	&:link
+	&:visited
+		text-decoration none
 
 
-a:link
-	color red
+	&:link
+		color $gray
 
 
-a:visited
-	color darkred
+	&:visited
+		color darkred
 
 
-a:hover
-a:active
-a:focus
-	text-decoration underline
+	&:hover
+	&:active
+	&:focus
+		text-decoration underline
 
 
 #page
@@ -184,9 +184,8 @@ a:focus
 		width 100%
 		margin-bottom 1.5em
 
-	.widget:last-child
-		margin-bottom 0
-
+		&:last-child
+			margin-bottom 0
 
 	.widget-title
 		margin-top 0
