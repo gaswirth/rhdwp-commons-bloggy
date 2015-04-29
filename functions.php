@@ -85,6 +85,14 @@ function rhd_enqueue_scripts() {
 
 	if ( is_singular() )
 		wp_enqueue_script( 'comment-reply' );
+
+
+			// Localize data for client-side use
+	global $wp_query;
+	$data = array(
+		'inc_slidebars' => ( $theme_opts['rhd_include_slidebars'] == '1' ) ? true : false
+	);
+	wp_localize_script( 'rhd-main', 'wp_data', $data );
 }
 add_action('wp_enqueue_scripts', 'rhd_enqueue_scripts');
 

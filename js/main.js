@@ -17,9 +17,7 @@ var isSingle = ( $body.hasClass('single') ) ? true : false,
 	isPaged = $body.hasClass('paged');
 
 // wp_data object
-var homeUrl = wp_data.home_url,
-	themeDir = wp_data.theme_dir,
-	imgDir = wp_data.img_dir;
+var incSlidebars = wp_data.inc_slidebars;
 
 var isFrontPage = ( $body.hasClass('front-page') === true ) ? true : false;
 var isMobile = ( $body.hasClass('mobile') === true ) ? true : false;
@@ -33,7 +31,7 @@ var isTablet = ( $body.hasClass('tablet') === true ) ? true : false;
 (function($){
 	rhdInit();
 
-	if ( wp_data.inc_slidebars > 0 ) {
+	if ( incSlidebars > 0 ) {
 		$.slidebars({
 			siteClose: false
 		});
