@@ -85,21 +85,6 @@ function rhd_enqueue_scripts() {
 
 	if ( is_singular() )
 		wp_enqueue_script( 'comment-reply' );
-
-
-	// Localize data for client-side use
-    global $wp_query;
-    $data = array(
-            'home_url' => home_url(),
-            'theme_dir' => RHD_THEME_DIR,
-            'img_dir' => RHD_IMG_DIR,
-            'ajax_url' => admin_url( 'admin-ajax.php' ),
-            'query_vars' => json_encode( $wp_query->query ),
-            'inc_slidebars' => $theme_opts['rhd_include_slidebars'],
-            'inc_packery' => $theme_opts['rhd_include_packery']
-		);
-    wp_localize_script( 'rhd-plugins', 'wp_data', $data);
-
 }
 add_action('wp_enqueue_scripts', 'rhd_enqueue_scripts');
 
