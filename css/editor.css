@@ -1,5 +1,5 @@
 /***
-* RHD Dev: Compiled at 9:39:42 AM on 30-04-2015
+* RHD Dev: Compiled at 10:03:15 AM on 30-04-2015
 ***/
 
 /**
@@ -418,15 +418,14 @@ a:focus {
   transition: all 0.5s;
 }
 #colophon {
-  width: 100%;
-  margin-top: 2em;
-  color: #fff;
-}
-#colophon .site-info {
   width: 85%;
   max-width: 64em;
   position: relative;
   margin: 0 auto 0 auto;
+  margin-top: 2em;
+  color: #fff;
+}
+#colophon .site-info {
   padding: 1em 0;
   border-top: 1.5px solid #fff;
   text-align: center;
