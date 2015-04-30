@@ -1,5 +1,5 @@
 /***
-* RHD Dev: Compiled at 5:39:30 PM on 29-04-2015
+* RHD Dev: Compiled at 10:28:15 PM on 29-04-2015
 ***/
 
 .unselectable {
@@ -367,15 +367,15 @@ a:focus {
   position: relative;
   margin: 0 auto 0 auto;
 }
-#masthead .site-title {
+#site-title-container {
   width: 100%;
 }
-#masthead .site-title #site-title,
-#masthead .site-title #site-description,
+#site-title,
+#site-description,
 #sb-title {
   margin: 0;
 }
-#masthead .site-title #site-title,
+#site-title,
 #sb-title {
   width: 100%;
   display: inline-block;
@@ -387,18 +387,18 @@ a:focus {
   text-transform: uppercase;
   text-align: left;
 }
-#masthead .site-title #site-title a,
+#site-title a,
 #sb-title a {
   color: inherit;
   text-decoration: none;
 }
-#masthead .site-title #site-description {
+#site-description {
   width: 100%;
   font-size: 1em;
   text-align: right;
   text-transform: lowercase;
 }
-#masthead #hamburger {
+#hamburger {
   position: absolute;
   top: -0.5rem;
   right: 0;
@@ -528,7 +528,7 @@ a:focus {
   #hamburger {
     display: none;
   }
-  #masthead .site-title {
+  #masthead #site-title-container {
     width: 78%;
     float: right;
   }

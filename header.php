@@ -56,7 +56,7 @@
 
 		<div id="page" class="hfeed site sb-site-container">
 			<header id="masthead" class="site-header" role="banner">
-				<div class="site-title">
+				<div id="site-title-container">
 					<h1 id="site-title" class="site-title"><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 					<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 				</div>
