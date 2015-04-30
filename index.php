@@ -28,7 +28,7 @@ get_header(); ?>
 					// Show a different message to a logged-in user who can add posts.
 				?>
 					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( 'No posts to display', 'rhd' ); ?></h1>
+						<h2 class="entry-title"><?php _e( 'No posts to display', 'rhd' ); ?></h2>
 					</header>
 
 					<div class="entry-content">
@@ -39,7 +39,7 @@ get_header(); ?>
 					// Show the default message to everyone else.
 				?>
 					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( 'Nothing Found', 'rhd' ); ?></h1>
+						<h2 class="entry-title"><?php _e( 'Nothing Found', 'rhd' ); ?></h2>
 					</header>
 
 					<div class="entry-content">
