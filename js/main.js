@@ -35,8 +35,8 @@ var isTablet = ( $body.hasClass('tablet') === true ) ? true : false;
 		$.slidebars({
 			siteClose: false
 		});
+		toggleBurger();
 	}
-
 })(jQuery);
 
 
@@ -52,5 +52,17 @@ function rhdInit() {
 function wpadminbarPush() {
 	jQuery("#wpadminbar").css({
 		top: '50px',
+	});
+}
+
+
+// Adapted from Hamburger Icons: https://github.com/callmenick/Animating-Hamburger-Icons
+function toggleBurger() {
+	var toggles = jQuery(".cmn-toggle-switch");
+	
+	toggles.click(function(e){
+		e.preventDefault();  
+		jQuery(this).toggleClass('active');
+		console.log('click');
 	});
 }
