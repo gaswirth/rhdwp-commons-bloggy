@@ -61,11 +61,9 @@
 					<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 				</div>
 
-				<div id="hamburger">
-					<button class="sb-toggle-left cmn-toggle-switch cmn-toggle-switch__htla">
-						<span>toggle menu</span>
-					</button>
-				</div>
+				<button id="hamburger" class="sb-toggle-left cmn-toggle-switch cmn-toggle-switch__htla">
+					<span>toggle menu</span>
+				</button>
 			</header><!-- #masthead -->
 
 			<main id="main" class="clearfix">
