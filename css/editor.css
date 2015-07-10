@@ -1,5 +1,5 @@
 /***
-* RHD Dev: Compiled at 10:07:08 PM on 09-07-2015
+* RHD Dev: Compiled at 10:08:54 PM on 09-07-2015
 ***/
 
 /**
@@ -412,11 +412,11 @@ a:active {
   right: 0;
 }
 #hamburger span {
-  background-color: #fff;
+  background-color: #000;
 }
 #hamburger span::before,
 #hamburger span::after {
-  background-color: #fff;
+  background-color: #000;
 }
 #sb-title {
   text-align: center;
