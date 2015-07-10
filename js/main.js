@@ -16,8 +16,6 @@ var isSingle = ( $body.hasClass('single') ) ? true : false,
 	isGrid = ( $main.hasClass('grid') === true ) ? true : false,
 	isPaged = $body.hasClass('paged');
 
-// wp_data object
-var incSlidebars = wp_data.inc_slidebars;
 
 var isFrontPage = ( $body.hasClass('front-page') === true ) ? true : false;
 var isMobile = ( $body.hasClass('mobile') === true ) ? true : false;
@@ -29,14 +27,17 @@ var isTablet = ( $body.hasClass('tablet') === true ) ? true : false;
    ========================================================================== */
 
 (function($){
-	rhdInit();
 
-	if ( incSlidebars > 0 ) {
+	$(document).ready(function(){
+		rhdInit();
+
 		$.slidebars({
 			siteClose: false
 		});
+
 		toggleBurger();
-	}
+	});
+
 })(jQuery);
 
 
@@ -59,10 +60,9 @@ function wpadminbarPush() {
 // Adapted from Hamburger Icons: https://github.com/callmenick/Animating-Hamburger-Icons
 function toggleBurger() {
 	var toggles = jQuery(".cmn-toggle-switch");
-	
+
 	toggles.click(function(e){
-		e.preventDefault();  
+		e.preventDefault();
 		jQuery(this).toggleClass('active');
-		console.log('click');
 	});
 }
