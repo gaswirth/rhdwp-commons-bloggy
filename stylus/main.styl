@@ -42,7 +42,6 @@ a
 
 	&:hover
 	&:active
-	&:focus
 		text-decoration underline
 
 
@@ -52,7 +51,7 @@ a
 
 
 #masthead
-	wrapper()
+	-wrapper()
 
 
 #site-title-container
@@ -81,14 +80,21 @@ a
 
 
 #hamburger
+	font-size 1.48rem
+	cursor pointer
+	display block
+	background-color transparent
 	position absolute
 	top -0.5rem
 	right 0
-	background-color black // sample bg animation color
-	
-	&.active
-		background-color gray // sample bg animation color
-		
+
+	span
+		background-color white
+
+		&::before
+		&::after
+			background-color @background-color
+
 
 #sb-title
 	@extends #site-title
@@ -97,7 +103,7 @@ a
 
 
 #main
-	wrapper()
+	-wrapper()
 	box-sizing border-box
 
 
@@ -111,7 +117,7 @@ a
 
 
 #colophon
-	wrapper()
+	-wrapper()
 	margin-top 2em
 	color white
 

@@ -1,27 +1,21 @@
 /***
-* RHD Dev: Compiled at 9:00:40 PM on 13-06-2015
+* RHD Dev: Compiled at 10:07:08 PM on 09-07-2015
 ***/
 
 /**
  * TinyMCE Styles
  **/
 .unselectable {
-  -webkit-user-select: none; /* Chrome/Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+ */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
 }
-.flexbox {
-  text-align: justify;
-}
-.flexbox:after {
-  width: 100%;
-  display: inline-block;
-  content: '';
-}
-.flexitem {
-  display: inline-block;
+.invisible {
+  position: absolute;
+  visibility: hidden;
+  margin: 0;
 }
 .cmn-toggle-switch {
   display: block;
@@ -358,8 +352,6 @@ body.admin-bar #wpadminbar {
 }
 a {
   outline: 0 !important;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
 }
 a:link,
 a:visited {
@@ -372,8 +364,7 @@ a:visited {
   color: #8b0000;
 }
 a:hover,
-a:active,
-a:focus {
+a:active {
   text-decoration: underline;
 }
 #page {
@@ -412,13 +403,20 @@ a:focus {
   text-decoration: none;
 }
 #hamburger {
+  font-size: 1.48rem;
+  cursor: pointer;
+  display: block;
+  background-color: transparent;
   position: absolute;
   top: -0.5rem;
   right: 0;
-  background-color: #000;
 }
-#hamburger.active {
-  background-color: #808080;
+#hamburger span {
+  background-color: #fff;
+}
+#hamburger span::before,
+#hamburger span::after {
+  background-color: #fff;
 }
 #sb-title {
   text-align: center;
@@ -437,8 +435,6 @@ a:focus {
   margin: 0 auto;
   position: relative;
   box-sizing: border-box;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 #colophon {
   width: 85%;
