@@ -49,7 +49,7 @@
 			);
 		?>
 
-		<div class="sb-slidebar sb-left sb-style-overlay sb-width-thin">
+		<div class="sb-slidebar sb-left sb-style-overlay sb-width-thin sb-momentum-scrolling">
 			<h2 id="sb-title"><?php bloginfo( 'name' ); ?></h2>
 			<?php wp_nav_menu( $nav_args_sb ); ?>
 		</div>

@@ -206,8 +206,15 @@ a
 #site-navigation-sb-container
 	li
 		a
-			color inherit
+			color white
 			letter-spacing 0.1em
+			text-decoration none
+
+		.sub-menu
+			a
+				&:active
+				&:hover
+					color (@color)
 
 
 #site-navigation-sidebar-container

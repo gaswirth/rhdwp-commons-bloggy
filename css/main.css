@@ -1,5 +1,5 @@
 /***
-* RHD Dev: Compiled at 10:08:54 PM on 09-07-2015
+* RHD Dev: Compiled at 12:41:15 PM on 23-07-2015
 ***/
 
 .unselectable {
@@ -519,8 +519,15 @@ a:active {
 }
 #site-navigation-sidebar-container li a,
 #site-navigation-sb-container li a {
-  color: inherit;
+  color: #fff;
   letter-spacing: 0.1em;
+  text-decoration: none;
+}
+#site-navigation-sidebar-container li .sub-menu a:active,
+#site-navigation-sb-container li .sub-menu a:active,
+#site-navigation-sidebar-container li .sub-menu a:hover,
+#site-navigation-sb-container li .sub-menu a:hover {
+  color: ;
 }
 #site-navigation-sidebar-container {
   margin-right: 1em;
