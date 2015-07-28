@@ -34,15 +34,13 @@ $theme_opts = get_option( 'rhd_theme_settings' );
 function rhd_enqueue_styles(){
 	global $theme_opts;
 
+	wp_register_style( 'rhd-sitewide', content_url() . '/global/sitewide.css', array(), '1', 'all' );
 	wp_register_style( 'rhd-main', RHD_THEME_DIR . '/css/main.css', array(), '1', 'all' );
 	wp_register_style( 'rhd-enhanced', RHD_THEME_DIR . '/css/enhanced.css', array(), '1', 'all' );
 	wp_register_style( 'Slidebars', RHD_THEME_DIR . '/js/vendor/Slidebars/dist/slidebars.min.css', array(), null, 'all' );
 
 	$normalize_deps = array();
-	if ( $theme_opts['rhd_include_slidebars'] == '1' ) {
-		wp_enqueue_style( 'Slidebars' );
-		$normalize_deps[] = 'Slidebars';
-	}
+	$normalize_deps[] = 'Slidebars';
 
 	if ( !rhd_is_mobile() ) {
 		wp_enqueue_style( 'rhd-enhanced' );
@@ -51,6 +49,7 @@ function rhd_enqueue_styles(){
 	wp_register_style( 'normalize', RHD_THEME_DIR . '/css/normalize.css', $normalize_deps, null, 'all' );
 
 	wp_enqueue_style( 'rhd-main' );
+	wp_enqueue_style( 'rhd-sitewide' );
 	wp_enqueue_style( 'normalize' );
 	wp_enqueue_style( 'google-fonts' );
 }
